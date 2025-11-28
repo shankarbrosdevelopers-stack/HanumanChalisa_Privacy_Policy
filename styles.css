@@ -1,0 +1,298 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    border-bottom: 3px solid #FF9933;
+    margin-bottom: 40px;
+    background: linear-gradient(135deg, #FFF5E6 0%, #FFFFFF 100%);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(255, 153, 51, 0.1);
+}
+
+.app-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FF9933;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.app-name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.last-updated {
+    font-size: 0.95rem;
+    color: #777;
+    font-style: italic;
+}
+
+/* Content */
+.content {
+    flex: 1;
+    padding-bottom: 40px;
+}
+
+.intro-section {
+    background-color: #FFF9F0;
+    padding: 24px;
+    border-radius: 8px;
+    border-left: 4px solid #FF9933;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.intro-section p {
+    margin-bottom: 12px;
+}
+
+.intro-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Policy Sections */
+.policy-section {
+    margin-bottom: 36px;
+    padding: 24px;
+    background-color: #FAFAFA;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.policy-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.policy-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #FF9933;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #FFE4CC;
+}
+
+.policy-section h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+.policy-section p {
+    margin-bottom: 12px;
+    color: #444;
+}
+
+.policy-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Lists */
+ul {
+    margin: 16px 0;
+    padding-left: 24px;
+}
+
+li {
+    margin-bottom: 8px;
+    color: #444;
+    line-height: 1.6;
+}
+
+li::marker {
+    color: #FF9933;
+}
+
+/* Highlight Text */
+.highlight {
+    font-weight: 600;
+    color: #FF6600;
+}
+
+/* Contact Email */
+.contact-email {
+    font-size: 1.1rem;
+    margin-top: 16px;
+    padding: 16px;
+    background-color: #FFF5E6;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.contact-email a {
+    color: #FF9933;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.contact-email a:hover {
+    color: #FF6600;
+    text-decoration: underline;
+}
+
+.contact-email a:focus {
+    outline: 2px solid #FF9933;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 24px 20px;
+    border-top: 2px solid #E0E0E0;
+    margin-top: 40px;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 16px;
+    }
+
+    .header {
+        padding: 30px 16px 24px;
+        margin-bottom: 30px;
+    }
+
+    .app-title {
+        font-size: 2rem;
+    }
+
+    .app-name {
+        font-size: 1.3rem;
+    }
+
+    .last-updated {
+        font-size: 0.9rem;
+    }
+
+    .intro-section {
+        padding: 20px;
+        margin-bottom: 24px;
+    }
+
+    .policy-section {
+        padding: 20px;
+        margin-bottom: 28px;
+    }
+
+    .policy-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .policy-section h3 {
+        font-size: 1.1rem;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 12px;
+    }
+
+    .header {
+        padding: 24px 12px 20px;
+    }
+
+    .app-title {
+        font-size: 1.75rem;
+    }
+
+    .app-name {
+        font-size: 1.2rem;
+    }
+
+    .intro-section {
+        padding: 16px;
+    }
+
+    .policy-section {
+        padding: 16px;
+    }
+
+    .contact-email {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: white;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .header {
+        background: none;
+        box-shadow: none;
+    }
+
+    .policy-section {
+        page-break-inside: avoid;
+        box-shadow: none;
+        background-color: white;
+    }
+
+    .policy-section:hover {
+        transform: none;
+    }
+
+    a {
+        color: #333;
+        text-decoration: underline;
+    }
+}
